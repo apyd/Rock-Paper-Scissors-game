@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Rock Paper Scissors game</title>
+  </head>
+
+  <body class="page">
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link">Rules</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Previous moves</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Author</a></li>
+      </ul>
+    </nav>
+    <main class="page__content">
+      <div class="message-box">
+        <p class="message-box__text">Your move!</p>
+      </div>
+      <div class="result-container">
+        <div class="user-container">
+          <div class="score-box">
+          <img class="score-box__icon--star" src="img/star-24.png" alt="star icon"/>
+          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
+          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
+          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
+          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
+          <p class="score-box__label">User's score</p>
+        </div>
+          <div class="user-choice">
+            <img class="user-choice__icon" src="img/rock-96.png" alt="selected icon by user"/>
+        </div>
+        </div>
+        <p class="result-container__text">vs</p>
+        <div class="opponent-container">
+          <div class="score-box">
+          <img class="score-box__icon--star" src="img/star-24.png" alt="star icon"/>
+          <img class="score-box__icon--star" src="img/star-24.png"  alt="star icon"/>
+          <img class="score-box__icon--star" src="img/star-24.png"  alt="star icon"/>
+          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
+          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
+          <p class="score-box__label">Opponent's score</p>
+        </div>
+          <div class="opponent-choice">
+            <img class="opponent-choice__icon" src="img/rock-96-reversed.png" alt="selected icon by opponent"/>
+          </div>
+        </div>
+      </div>
+      <div class="choice-container">
+        <div class="choice-container__icon"><img src="img/rock-96.png" alt=""/></div>
+        <div class="choice-container__icon"><img src="img/paper-96.png" alt=""/></div>
+        <div class="choice-container__icon"><img src="img/scissors-96.png" alt=""/></div>
+      </div>
+    </div>
+    </main>
+    <footer class="page__footer">
+      <p class="footer__text">Made by<a class="footer__link" href="github.com">Artur Pydych</a>
+      </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
