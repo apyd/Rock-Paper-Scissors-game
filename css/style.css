@@ -15,12 +15,21 @@
     align-items: center;
     padding: 0;
     list-style-type: none;
+    z-index: 5;
 }
 
 .nav__item {
     border-bottom: 1.5px solid  #F1C40F;
     margin: 0 5px;
+    z-index: 5;
 }
+
+.nav__item:active {
+    color: #1d2b69;
+    background-color: #F1C40F;
+    font-weight: bold;
+}
+
 
 .nav__link {
     text-decoration: none;
@@ -28,9 +37,16 @@
     font-size: 1.5em;
     display: block;
     padding: 15px;
+    z-index: 5;
 }
 
 .nav__link:hover {
+    color: #1d2b69;
+    background-color: #F1C40F;
+    font-weight: bold;
+}
+
+.nav__link:active {
     color: #1d2b69;
     background-color: #F1C40F;
     font-weight: bold;
@@ -107,10 +123,6 @@
     bottom: 0;
 }
 
-/* .user-choice:hover, .opponent-choice:hover {
-    background-color: #13ff4796;
-} */
-
 .choice-container {
     display: flex;
     flex-direction: row;
@@ -151,4 +163,47 @@
     margin-left: 10px;
 }
 
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(170, 170, 170, 0);
+    visibility: hidden;
+}
 
+.modal {
+    position: absolute;
+    width: 850px;
+    height: 830px;
+    top: 8%;
+    left: 28%;
+    background-color: white;
+    z-index: 20;
+    margin: 0 auto;
+    z-index: 2;
+}
+.modal--close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+}
+
+.modal--close:hover {
+    cursor: pointer;
+
+}
+
+
+.modal__content {
+    padding: 20px;
+    color: black;
+}
+
+.modal__header {
+    text-align: center;
+}
