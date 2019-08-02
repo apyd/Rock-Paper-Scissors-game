@@ -17,41 +17,41 @@
       <ul class="nav__list">
         <li class="nav__item">
           <a href="#" class="nav__link">Rules</a>
-          
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Previous moves</a></li>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Author</a></li>
-      </ul>
-      <div class="modal-bg">
-        <div class="modal">
-          <div class="modal__content">
-            <h2 class="modal__header">Rules</h2>
-            <span class="modal--close">&times;</span>
-            <p>This is test modal for rules</p>
-          </div>
-        </div>
-      </div>
-      <div class="modal-bg">
-        <div class="modal">
-            <div class="modal__content">
-              <span class="modal--close">&times;</span>
-              <h2 class="modal__header">Previous moves</h2>
-              <p>This is test modal for previous moves</p>
+          <div class="modal-bg">
+            <div class="modal">
+              <div class="modal__content">
+                <h2 class="modal__heading">Rules</h2>
+                <span class="modal-close__btn">&times;</span>
+                <p>This is test modal for rules</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modal-bg">
-          <div class="modal">
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Previous moves</a>
+          <div class="modal-bg">
+            <div class="modal">
               <div class="modal__content">
-                <span class="modal--close">&times;</span>
-                <h2 class="modal__header">Author</h2>
+                <span class="modal-close__btn">&times;</span>
+                <h2 class="modal__heading">Previous moves</h2>
+                <p>This is test modal for previous moves</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Author</a>
+          <div class="modal-bg">
+            <div class="modal">
+              <div class="modal__content">
+                <span class="modal-close__btn">&times;</span>
+                <h2 class="modal__heading">Author</h2>
                 <p>This is test modal for author</p>
               </div>
             </div>
-            </div>
+          </div>
+        </li>
+      </ul>
     </nav>
     <main class="page__content">
       <div class="message-box">
@@ -60,41 +60,95 @@
       <div class="result-container">
         <div class="user-container">
           <div class="score-box">
-          <img class="score-box__icon--star" src="img/star-24.png" alt="star icon"/>
-          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
-          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
-          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
-          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
-          <p class="score-box__label">User's score</p>
-        </div>
+            <img
+              class="score-box__icon--star"
+              src="img/star-24.png"
+              alt="star icon"
+            />
+            <img
+              class="score-box__icon--star"
+              src="img/star-24-empty.png"
+              alt="star icon"
+            />
+            <img
+              class="score-box__icon--star"
+              src="img/star-24-empty.png"
+              alt="star icon"
+            />
+            <img
+              class="score-box__icon--star"
+              src="img/star-24-empty.png"
+              alt="star icon"
+            />
+            <img
+              class="score-box__icon--star"
+              src="img/star-24-empty.png"
+              alt="star icon"
+            />
+            <p class="score-box__label">User's score</p>
+          </div>
           <div class="user-choice">
-            <img class="user-choice__icon" src="/img/questionmark-96.png" alt="selected icon by user"/>
-        </div>
+            <img
+              class="user-choice__icon"
+              src="/img/questionmark-96.png"
+              alt="selected icon by user"
+            />
+          </div>
         </div>
         <p class="result-container__text">vs</p>
         <div class="opponent-container">
           <div class="score-box">
-          <img class="score-box__icon--star" src="img/star-24.png" alt="star icon"/>
-          <img class="score-box__icon--star" src="img/star-24.png"  alt="star icon"/>
-          <img class="score-box__icon--star" src="img/star-24.png"  alt="star icon"/>
-          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
-          <img class="score-box__icon--star" src="img/star-24-empty.png" alt="star icon"/>
-          <p class="score-box__label">Opponent's score</p>
-        </div>
+            <img
+              class="score-box__icon--star"
+              src="img/star-24.png"
+              alt="star icon"
+            />
+            <img
+              class="score-box__icon--star"
+              src="img/star-24.png"
+              alt="star icon"
+            />
+            <img
+              class="score-box__icon--star"
+              src="img/star-24.png"
+              alt="star icon"
+            />
+            <img
+              class="score-box__icon--star"
+              src="img/star-24-empty.png"
+              alt="star icon"
+            />
+            <img
+              class="score-box__icon--star"
+              src="img/star-24-empty.png"
+              alt="star icon"
+            />
+            <p class="score-box__label">Opponent's score</p>
+          </div>
           <div class="opponent-choice">
-            <img class="opponent-choice__icon" src="img/rock-96-reversed.png" alt="selected icon by opponent"/>
+            <img
+              class="opponent-choice__icon"
+              src="img/rock-96-reversed.png"
+              alt="selected icon by opponent"
+            />
           </div>
         </div>
       </div>
       <div class="choice-container">
-        <div class="choice-container__icon"><img src="img/rock-96.png" alt=""/></div>
-        <div class="choice-container__icon"><img src="img/paper-96.png" alt=""/></div>
-        <div class="choice-container__icon"><img src="img/scissors-96.png" alt=""/></div>
+        <div class="choice-container__icon">
+          <img src="img/rock-96.png" alt="rock icon" />
+        </div>
+        <div class="choice-container__icon">
+          <img src="img/paper-96.png" alt="paper icon" />
+        </div>
+        <div class="choice-container__icon">
+          <img src="img/scissors-96.png" alt="scissors icon" />
+        </div>
       </div>
-    </div>
     </main>
     <footer class="page__footer">
-      <p class="footer__text">Made by<a class="footer__link" href="github.com">Artur Pydych</a>
+      <p class="footer__text">
+        Made by<a class="footer__link" href="github.com">Artur Pydych</a>
       </p>
     </footer>
     <script src="js/script.js"></script>

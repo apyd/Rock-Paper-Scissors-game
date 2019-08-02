@@ -1,48 +1,60 @@
-var modals = document.getElementsByClassName('modal-bg');
-var links = document.getElementsByClassName('nav__link');
-var closeButtons = document.getElementsByClassName("modal--close")
-var choiceOptions = document.getElementsByClassName('choice-container__icon');
-var userChoice;
-var openedModal;
+var navLinks = document.getElementsByClassName("nav__link");
+var modalsBg = document.getElementsByClassName("modal-bg");
+var closeButtons = document.getElementsByClassName("modal-close__btn");
+var choiceOptions = document.getElementsByClassName("choice-container__icon");
+var openedModalBg, activeNavItem;
 
-
-for(var i=0; i < links.length; i++) {
-    links[i].addEventListener("click", showModal);
-    links[i].elementNumber = i;
-    closeButtons[i].addEventListener("click", closeModal);
-    window.addEventListener("click", closeModalWhenClickOutside);
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", onNavItemClick);
+  closeButtons[i].addEventListener("click", onCloseModalButtonClick);
+  modalsBg[i].addEventListener("click", onClickOutsideModalAndNav);
+}
+function onNavItemClick(e) {
+  if (openedModalBg != null) {
+    closeModal();
+    cancelActiveNavItem();
+  }
+  openModal(e);
+  makeActiveNavItem(e);
 }
 
-function showModal(e) {
-    if(openedModal != null) {
-        closeModal();
+function onClickOutsideModalAndNav(e) {
+  if (e.target == openedModalBg) {
+    closeModal();
+    cancelActiveNavItem();
+  }
 }
-    openedModal = e.srcElement.elementNumber;    
-    modals[openedModal].style.visibility = 'visible';
-};
+
+function onCloseModalButtonClick(e) {
+  closeModal();
+  cancelActiveNavItem();
+}
+
+function openModal(e) {
+  openedModalBg = e.currentTarget.nextElementSibling;
+  openedModalBg.style.visibility = "visible";
+}
 
 function closeModal() {
-    modals[openedModal].style.visibility = 'hidden';
-};
-
-function closeModalWhenClickOutside(e) {
-    if(e.target == modals[openedModal]) {
-    for(i = 0; i < modals.length; i++) {
-        modals[i].style.visibility = "hidden";
-    }
-}
+  openedModalBg.style.visibility = "hidden";
+  openedModalBg = null;
 }
 
-var choiceOptions = document.getElementsByClassName('choice-container__icon');
-for(var i=0; i < choiceOptions.length; i++) {
-    choiceOptions[i].addEventListener("click", selectedOption);
-    choiceOptions[i].optionNumber = i;
+function cancelActiveNavItem() {
+  activeNavItem.classList.remove("nav__link--active");
+  activeNavItem = null;
+}
+
+function makeActiveNavItem(e) {
+  activeNavItem = e.currentTarget;
+  activeNavItem.classList.add("nav__link--active");
+}
+
+for (var i = 0; i < choiceOptions.length; i++) {
+  choiceOptions[i].addEventListener("click", selectedOption);
 }
 
 function selectedOption(e) {
-    userChoice = choiceOptions[e.currentTarget.optionNumber];
-    var imgPath = userChoice.children[0].src;
-    var userSelection = document.getElementsByClassName('user-choice__icon');
-    userSelection[0].src = imgPath;
+  var userChoice = e.currentTarget.children[0].src;
+  document.getElementsByClassName("user-choice__icon")[0].src = userChoice;
 }
-

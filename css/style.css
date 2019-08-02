@@ -1,209 +1,200 @@
 .page {
-    background-color: #1d2b69;
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
+  background-color: #1d2b69;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    list-style-type: none;
-    z-index: 5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
 }
 
 .nav__item {
-    border-bottom: 1.5px solid  #F1C40F;
-    margin: 0 5px;
-    z-index: 5;
+  border-bottom: 1.5px solid #f1c40f;
+  margin: 0 5px;
+  z-index: 10;
 }
-
-.nav__item:active {
-    color: #1d2b69;
-    background-color: #F1C40F;
-    font-weight: bold;
-}
-
 
 .nav__link {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-    display: block;
-    padding: 15px;
-    z-index: 5;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5em;
+  display: block;
+  padding: 15px;
 }
 
 .nav__link:hover {
-    color: #1d2b69;
-    background-color: #F1C40F;
-    font-weight: bold;
+  color: #1d2b69;
+  background-color: #f1c40f;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.nav__link:active {
-    color: #1d2b69;
-    background-color: #F1C40F;
-    font-weight: bold;
+.nav__link--active {
+  color: #1d2b69;
+  background-color: #f1c40f;
+  font-weight: bold;
 }
 
 .page__content {
-    margin-left: 300px;
-    margin-right: 300px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
 .result-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-top: 80px;
 }
 
 .result-container__text {
-    font-size: 3em;
-    font-size: bold;
-    margin-bottom: 0;
+  font-size: 3em;
+  font-size: bold;
+  margin-bottom: 0;
 }
 
 .message-box {
-    height: 70px;
-    width: 270px;
-    background: #000000b3;
-    transform: rotate(-4deg);
-    margin: 0 auto;    
+  height: 70px;
+  width: 270px;
+  background: #000000b3;
+  transform: rotate(-4deg);
+  margin: 0 auto;
 }
 
 .message-box__text {
-    font-size: 2.7em;
-    font-weight: bold;
-    text-align: center;
-    transform: rotate(4deg);
-    margin-top: 100px;
-    padding-top: 10px;
+  font-size: 2.7em;
+  font-weight: bold;
+  text-align: center;
+  transform: rotate(4deg);
+  margin-top: 100px;
+  padding-top: 10px;
 }
 
 .score-box {
-    padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .score-box__label {
-    text-align: center;
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-top: 0;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 0;
 }
 
-.user-choice, .opponent-choice {
-    position: relative;
-    background-color: #c4c4c410;
-    border-radius: 75px 0px 0px 75px;
-    padding: 80px 0;
-    margin-top: 10px;
+.user-choice,
+.opponent-choice {
+  position: relative;
+  background-color: #c4c4c410;
+  border-radius: 75px 0px 0px 75px;
+  padding: 80px 0;
+  margin-top: 10px;
 }
 
 .user-choice {
-    border-radius: 0px 75px 75px 0px;
+  border-radius: 0px 75px 75px 0px;
 }
 
-.user-choice__icon, .opponent-choice__icon {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.user-choice__icon,
+.opponent-choice__icon {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .choice-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 80px;
 }
 
 .choice-container__icon {
-    background-color: #097aff;
-    box-shadow: 0px 4px 4px #00000040;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 10px;
+  background-color: #097aff;
+  box-shadow: 0px 4px 4px #00000040;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
 }
 
 .choice-container__icon:hover {
-    background-color: #f1c40fbf;
+  background-color: #f1c40fbf;
+  cursor: pointer;
 }
 
 .page__footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .footer__text {
-    font-size: 1.2em;
-    text-align: center;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .footer__link {
-    color: #F1C40F;
-    text-decoration: none;
-    margin-left: 10px;
+  color: #f1c40f;
+  text-decoration: none;
+  margin-left: 10px;
 }
 
 .modal-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    overflow: auto;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(170, 170, 170, 0);
-    visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(170, 170, 170, 1);
+  visibility: hidden;
 }
 
 .modal {
-    position: absolute;
-    width: 850px;
-    height: 830px;
-    top: 8%;
-    left: 28%;
-    background-color: white;
-    z-index: 20;
-    margin: 0 auto;
-    z-index: 2;
+  position: absolute;
+  width: 850px;
+  height: 500px;
+  top: 10%;
+  left: 28%;
+  background-color: #ffffff;
+  margin: 0 auto;
 }
-.modal--close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
+.modal-close__btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
 }
 
-.modal--close:hover {
-    cursor: pointer;
-
+.modal-close__btn:hover {
+  cursor: pointer;
 }
-
 
 .modal__content {
-    padding: 20px;
-    color: black;
+  padding: 20px;
+  color: #000000;
 }
 
-.modal__header {
-    text-align: center;
+.modal__heading {
+  text-align: center;
 }
