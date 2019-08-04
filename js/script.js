@@ -2,13 +2,36 @@ var navLinks = document.getElementsByClassName("nav__link");
 var modalsBg = document.getElementsByClassName("modal-bg");
 var closeButtons = document.getElementsByClassName("modal-close__btn");
 var choiceOptions = document.getElementsByClassName("choice-container__icon");
-var openedModalBg, activeNavItem;
+var gameOptions = document.getElementsByClassName("game-options__item");
+var openedModalBg, activeNavItem, selectedType;
 
 for (var i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener("click", onNavItemClick);
   closeButtons[i].addEventListener("click", onCloseModalButtonClick);
   modalsBg[i].addEventListener("click", onClickOutsideModalAndNav);
 }
+
+for (var i = 0; i < gameOptions.length; i++) {
+	gameOptions[i].addEventListener("click", onGameTypeClick);
+}
+
+function onGameTypeClick(e) {
+	if (selectedType != null) {
+		unselectGameType();
+  }
+	selectGameType(e);
+}
+
+function unselectGameType() {
+	selectedType.classList.remove("game-options__item--active");
+	selectedType = null;
+}
+
+function selectGameType(e) {
+	selectedType = e.currentTarget;
+  selectedType.classList.add("game-options__item--active");
+}
+
 function onNavItemClick(e) {
   if (openedModalBg != null) {
     closeModal();
