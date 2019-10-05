@@ -68,7 +68,6 @@
   height: 70px;
   width: 270px;
   background: #000000b3;
-  transform: rotate(-4deg);
   margin: 0 auto;
 }
 
@@ -76,7 +75,6 @@
   font-size: 2.7em;
   font-weight: bold;
   text-align: center;
-  transform: rotate(4deg);
   margin-top: 100px;
   padding-top: 10px;
 }
@@ -202,6 +200,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 0;
@@ -211,7 +210,6 @@
 .game-options__item {
   padding: 10px 20px;
   text-align: center;
-  width: 20%;
   color: #f1c40f;
   border: 1px solid #f1c40f;
   cursor: pointer;
@@ -271,7 +269,7 @@
 .username {
   margin: 0 auto;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .label {
@@ -309,14 +307,14 @@
   width: 100%;
   font-size: 16px;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .btn {
   position: absolute;
   width: 60%;
   height: 40px;
-  top: 85%;
+  top: 90%;
   left: 20%;
   font-size: 16px;
   color: #fff;

@@ -5,7 +5,7 @@ var choiceOptions = document.getElementsByClassName("choice-container__icon");
 var gameOptions = document.getElementsByClassName("game-options__item");
 var startGameBtn = document.getElementsByClassName("btn");
 var formBg = document.getElementsByClassName("form-bg");
-var openedModalBg, activeNavItem, selectedType, username;
+var openedModalBg, activeNavItem, selectedType;
 
 for (var i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener("click", onNavItemClick);
@@ -21,18 +21,19 @@ startGameBtn[0].addEventListener("click", getUserName);
 startGameBtn[0].addEventListener("click", startGame);
 
 function startGame() {
-  if (!selectedType || !username) {
+  if (!selectedType || !model.username) {
     return alert(
       "If you want to start a game please specify your name and select game type"
     );
   }
-  view.gameType = selectedType.dataset.value;
-  view.username = username;
+  model.gameType = selectedType.dataset.value;
+  view.displayUsername();
+  view.displayGameType(model.gameType);
   formBg[0].style.visibility = "hidden";
 }
 
 function getUserName() {
-  username = document.getElementsByClassName("input--text")[0].value;
+  model.username = document.getElementsByClassName("input--text")[0].value;
 }
 
 function onGameTypeClick(e) {
@@ -102,11 +103,28 @@ function selectedOption(e) {
   document.getElementsByClassName("user-choice__icon")[0].src = userChoice;
 }
 
-// 1. Taking value from input & data-value from game type divs
-// 2. Username field validation
-// 3. Sending selected option and username to view object
-// 4. Validating and allowing to play only if username and game type was selected
+let view = {
+  displayUsername: function () {
+    var elementWithUsername = document.getElementsByClassName("jsUsername");
+    elementWithUsername[0].innerHTML = model.username + '\'s' + ' score';
+  },
+  displayGameType: function (starsNumber) {
+    var scoreBoxes = document.getElementsByClassName("score-box");
+    for (var j = 0; j < scoreBoxes.length; j++) {
+      for (var i = 0; i < starsNumber; i++) {
+        var starIcon = document.createElement("img");
+        starIcon.src = 'img/star-24-empty.png';
+        starIcon.alt = 'star icon';
+        starIcon.classList.add("score-box__icon--star");
+        scoreBoxes[j].appendChild(starIcon);
+      }
+    }
+  }
+};
 
-var view = {};
-var controller = {};
-var model = {};
+let controller = {};
+
+let model = {
+  username: null,
+  gameType: null
+};
